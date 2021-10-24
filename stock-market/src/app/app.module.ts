@@ -5,16 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DatosUsuarioComponent } from './pedidos/datos-usuario/datos-usuario.component';
 import { ButtonsMainComponent } from './pedidos/buttons-main/buttons-main.component';
+import { ListadoPedidosGComponent } from './pedidos/listado-pedidos-g/listado-pedidos-g.component';
+import { ModalModule } from './pedidos/modal';
+import { ReusableTableComponent } from './pedidos/reusable-table/reusable-table.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DatosUsuarioComponent,
-    ButtonsMainComponent
+    ButtonsMainComponent,
+    ListadoPedidosGComponent,
+    ReusableTableComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    ModalModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
